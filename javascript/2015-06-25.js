@@ -1,4 +1,6 @@
 /**
+ * http://www.careercup.com/question?id=5723674717978624
+ *
  * Write a function to print a tree, which can have any number of nodes,
  * in level order, each level on a new line.  E.g.,
  * If the tree is :
@@ -9,7 +11,7 @@
  * 	1\n
  * 	2,3\n
  * 	4,5,6\n
-*/
+ */
 
 exports.Node = function (value, children) {
 	this.value = value;
@@ -51,4 +53,16 @@ exports.printTree = function (rootNode) {
 		}
 	}
 	return s;
+};
+
+/**
+ * http://www.careercup.com/question?id=5654826979426304
+ *
+ * Convert a string to its permutated string using only adjacent swapping.
+ * E.g.,
+ * 	CAT => CAT, CTA, TCA, TAC
+ */
+
+exports.permutate = function (s) {
+	return [];
 };
