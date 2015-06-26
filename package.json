@@ -1,0 +1,22 @@
+{
+  "name": "careercup",
+  "version": "0.0.0",
+  "description": "Questions from http://www.careercup.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sterpe/careercup.git"
+  },
+  "author": "Steve Terpe <sterpe@rubiconproject.com> (https://github.rp-core.com/sterpe)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sterpe/careercup/issues"
+  },
+  "homepage": "https://github.com/sterpe/careercup",
+  "devDependencies": {
+    "jest-cli": "^0.4.13"
+  }
+}
