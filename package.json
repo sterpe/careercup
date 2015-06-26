@@ -4,7 +4,7 @@
   "description": "Questions from http://www.careercup.com",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --verbose"
   },
   "repository": {
     "type": "git",
