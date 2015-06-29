@@ -75,7 +75,7 @@ exports.permutate = function (s) {
 
 	permutations.push(s.join(""));
 
-	while (true) {
+	while (1) {
 		k = s.length - 2;
 		for (k; k > -1; --k) {
 			if (s[k] < s[k + 1]) {
