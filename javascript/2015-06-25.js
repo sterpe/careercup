@@ -62,6 +62,7 @@ exports.printTree = function (rootNode) {
  */
 
 exports.permutate = function (s) {
+	var sort = require('./algorithms/bubble-sort').sort;
 	var permutations = [];
 	var i, j, k;
 	var tmp;
@@ -70,8 +71,8 @@ exports.permutate = function (s) {
 		s = s.split("");
 	}
 
-	// Assume a `bubble sort'...
-	s = s.sort();
+	// Use a `bubble sort'...
+	s = sort(s);
 
 	permutations.push(s.join(""));
 

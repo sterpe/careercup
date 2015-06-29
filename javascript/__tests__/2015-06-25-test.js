@@ -1,4 +1,5 @@
 jest.dontMock('../2015-06-25');
+jest.dontMock('../algorithms/bubble-sort');
 
 describe('A function to print a tree in level order, ' +
 		'each level on a new line.', function () {
