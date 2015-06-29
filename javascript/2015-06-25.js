@@ -1,5 +1,4 @@
 /**
- * http://www.careercup.com/question?id=5723674717978624
  *
  * Write a function to print a tree, which can have any number of nodes,
  * in level order, each level on a new line.  E.g.,
@@ -56,13 +55,73 @@ exports.printTree = function (rootNode) {
 };
 
 /**
- * http://www.careercup.com/question?id=5654826979426304
  *
  * Convert a string to its permutated string using only adjacent swapping.
  * E.g.,
- * 	CAT => CAT, CTA, TCA, TAC
+ *	CAT => ACT, ATC, CAT, CTA, TAC, TCA
  */
 
 exports.permutate = function (s) {
-	return [];
+	var permutations = [];
+	var i, j, k;
+	var tmp;
+
+	if (typeof s === 'string') {
+		s = s.split("");
+	}
+
+	// Assume a `bubble sort'...
+	s = s.sort();
+
+	permutations.push(s.join(""));
+
+	while (true) {
+		k = s.length - 2;
+		for (k; k > -1; --k) {
+			if (s[k] < s[k + 1]) {
+				break;
+			}
+		}
+
+		if (k === -1) {
+			return permutations;
+		}
+
+		l = s.length - 1;
+		for (l; l > k; --l) {
+			if (s[k] < s[l]) {
+				break;
+			}
+		}
+
+		// Equivalent to ...
+		// tmp = s[l];
+		// s[l] = s[k];
+		// s[k] = tmp;
+
+		for (i = k; i < l; ++i) {
+			tmp = s[i];
+			s[i] = s[i + 1];
+			s[i + 1] = tmp;
+		}
+		for (i = l - 1; i > k; --i) {
+			tmp = s[i];
+			s[i] = s[i - 1];
+			s[i - 1] = tmp;
+		}
+
+		// Equivalent to ...
+		// var chunk = s.slice(k + 1).reverse();
+		// s.splice(k + 1, s.length);
+		// s.concat(chunk);
+
+		for (j = k + 1; j < s.length - 1; ++j) {
+			for (i = k + 1; i < s.length - (1 + j - (k + 1)); ++i) {
+				tmp = s[i];
+				s[i] = s[i + 1];
+				s[i + 1] = tmp;
+			}
+		}
+		permutations.push(s.join(""));
+	}
 };

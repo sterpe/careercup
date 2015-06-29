@@ -28,10 +28,38 @@ describe('A function to convert a string to its permutated ' +
 		var permutate = require('../2015-06-25').permutate;
 
 		expect(permutate('CAT')).toEqual([
-			'CAT',
-			'CTA',
-			'TCA',
-			'TAC'
+			'ACT'
+			, 'ATC'
+			, 'CAT'
+			, 'CTA'
+			, 'TAC'
+			, 'TCA'
+		]);
+		expect(permutate('FOAL')).toEqual([
+			'AFLO'
+			, 'AFOL'
+			, 'ALFO'
+			, 'ALOF'
+			, 'AOFL'
+			, 'AOLF'
+			, 'FALO'
+			, 'FAOL'
+			, 'FLAO'
+			, 'FLOA'
+			, 'FOAL'
+			, 'FOLA'
+			, 'LAFO'
+			, 'LAOF'
+			, 'LFAO'
+			, 'LFOA'
+			, 'LOAF'
+			, 'LOFA'
+			, 'OAFL'
+			, 'OALF'
+			, 'OFAL'
+			, 'OFLA'
+			, 'OLAF'
+			, 'OLFA'
 		]);
 	});
 });
